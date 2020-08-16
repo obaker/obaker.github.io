@@ -4,12 +4,12 @@ function startTime() {
     var m = checkTime(today.getMinutes());
     var s = checkTime(today.getSeconds());
     var dd = checkTime(today.getDate());
-    var mm = checkTime((today.getMonth() + 1)); //January is 0!
-    var yyyy = today.getFullYear();
+    var mm = checkTime((today.getMonth() + 1)); //January is 0
+    var yy = (new Date().toISOString().substr(2,2));
     document.getElementById('clock').innerHTML =
-    h + ":" + m;
+    h + ":" + m + ":" + s;
     document.getElementById('date').innerHTML =
-    dd + "/" + mm + "/" + yyyy;
+    dd + "/" + mm + "/" + yy;
     if (7 > h) {
         document.getElementById('greeting').innerHTML =
         "Good Evening, Oliver";

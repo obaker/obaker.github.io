@@ -2,48 +2,90 @@
 <html>
 <head>
 <style>
-body {background-color: #004266;} 
-h1 {
-   color: #E6F6FF ;
+  * {
+  box-sizing: border-box;
 }
-
+@font-face {
+   font-family: CutiveMono;
+   src: url(fonts/CutiveMono-Regular.ttf);  
+}
+@font-face {
+  font-family: Raleway-Medium;
+   src: url(fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: Raleway-MediumItalic;
+  src: url(fonts/Raleway-MediumItalic.ttf);
+}
+body {background-color: #004266;} 
 .clock {
-   padding: 10px ;
+   padding: 10% 0% 5% 0%;
    color: #E6F6FF ;
-   font-size: 6vw;
+   font-size: 4vw;
    text-align: center;
+   font-family:CutiveMono
 }
 .date {
-   padding: 10px ;
+   padding: 10% 0% 5% 0% ;
    color: #E6F6FF ;
-   font-size: 3vw; 
+   font-size: 4vw; 
    justify-content: center;
    text-align: center;
+   font-family:CutiveMono
 }
+.greeting {
+   color: #E6F6FF ;
+   font-size: 1.5vw;
+   text-align: center;
+   font-family:Raleway-Medium;
+}
+
 .searchBox {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 .inputBox {
+  font-family: Raleway-MediumItalic;
   border-style: none none solid;
   line-height: 2;
-  font-size: 30px;
+  font-size: 1.5vw;
   color: #E6F6FF ;
   background:#004266
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 1080px) {
+  .column {
+    width: 100%;
+  }
 }
 </style>
 <title>Startpage</title>
 </head>
 <body>
-<h1> <div class = "greeting" id = "greeting"> </div> </h1>
+<h1>  </h1>
 <script src="js/start.js"> </script>
 </head>
 <body onload="startTime()">
+<div class="row">
+  <div class="column">
 <div class="clock" id="clock"></div>
+<div class = "greeting" id = "greeting"> </div>
+</div>
+<div class="column">
 <div class="date" id="date"></div>
 <div class="searchBox" id="searchBox">
   <form action="https://duckduckgo.com/" method="get">
-    <input class="inputBox" id="searchInput" type="text" name="q" placeholder="How can I help?" autocomplete="off" autofocus tabIndex="2"/></form>
+    <input class="inputBox" id="searchInput" type="text" name="q" placeholder="How can I help?"  autocomplete="off" autofocus tabIndex="2"/></form>
+</div>
+</div>
 </div>
 </html>
