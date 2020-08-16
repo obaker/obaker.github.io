@@ -10,17 +10,21 @@ function startTime() {
     h + ":" + m;
     document.getElementById('date').innerHTML =
     dd + "/" + mm + "/" + yyyy;
-    if (6 >= h || h >= 19) {
+    if (7 > h) {
         document.getElementById('greeting').innerHTML =
-        "Good Evening, Oliver"
+        "Good Evening, Oliver";
+    }    
+    else if (13 > h) {
+        document.getElementById('greeting').innerHTML =
+        "Good Morning, Oliver";
     }
-    else if (7 <= h <= 12) {
+    else if (19 > h) {
         document.getElementById('greeting').innerHTML =
-        "Good Morning, Oliver"
+        "Good Afternoon, Oliver";
     }
-    else if (13 <= h <= 18) {
+    else {
         document.getElementById('greeting').innerHTML =
-        "Good Afternoon, Oliver"
+        "Good Evening, Oliver";
     }
     var t = setTimeout(startTime, 500);
   }
