@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body {background-color: #004266;} 
+h1 {
+   color: #E6F6FF ;
+}
+
+.clock {
+   padding: 10px ;
+   color: #E6F6FF ;
+   font-size: 6vw;
+   text-align: center;
+}
+.date {
+   padding: 10px ;
+   color: #E6F6FF ;
+   font-size: 3vw; 
+   justify-content: center;
+   text-align: center;
+}
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.inputBox {
+  border-style: none none solid;
+  line-height: 2;
+  font-size: 30px;
+  color: #E6F6FF ;
+  background:#004266
+}
+</style>
 <title>Startpage</title>
 </head>
 <body>
-<h1> Startpage under construction </h1>
-</body>
+<h1> <div class = "greeting" id = "greeting"> </div> </h1>
+<script src="js/start.js"> </script>
+</head>
+<body onload="startTime()">
+<div class="clock" id="clock"></div>
+<div class="date" id="date"></div>
+<div class="searchBox" id="searchBox">
+  <form action="https://duckduckgo.com/" method="get">
+    <input class="inputBox" id="searchInput" type="text" name="q" placeholder="How can I help?" autocomplete="off" autofocus tabIndex="2"/></form>
+</div>
 </html>
