@@ -26,7 +26,7 @@ function startTime() {
         document.getElementById('greeting').innerHTML =
         "Good Evening, Oliver";
     }
-    var t = setTimeout(startTime, 500);
+    var t = setTimeout(startTime, 250);
   }
   function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
