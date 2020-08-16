@@ -7,7 +7,7 @@ function startTime() {
     var mm = checkTime((today.getMonth() + 1)); //January is 0
     var yy = (new Date().toISOString().substr(2,2));
     document.getElementById('clock').innerHTML =
-    h + ":" + m + ":" + s;
+    h + "|" + m + "|" + s;
     document.getElementById('date').innerHTML =
     dd + "/" + mm + "/" + yy;
     if (7 > h) {

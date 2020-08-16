@@ -7,6 +7,7 @@
 <style>
   * {
   box-sizing: border-box;
+  font-family:Raleway-Medium;
 }
 @font-face {
    font-family: CutiveMono;
@@ -21,44 +22,69 @@
   src: url(fonts/Raleway-MediumItalic.ttf);
 }
 body {background-color: #004266;} 
+p {
+  color: #CCECFF;
+  font-size:1vw;
+}
+h2 {
+  color: #CCECFF;
+  font-size:2vw;
+}
 .clock {
    padding: 10% 0% 5% 0%;
-   color: #E6F6FF ;
+   color:  #CCECFF ;
    font-size: 4vw;
-   text-align: center;
    font-family:CutiveMono
 }
 .date {
    padding: 10% 0% 5% 0% ;
-   color: #E6F6FF ;
+   color:  #CCECFF ;
    font-size: 4vw; 
-   justify-content: center;
-   text-align: center;
    font-family:CutiveMono
 }
 .greeting {
-   color: #E6F6FF ;
+   color:  #CCECFF ;
    font-size: 1.5vw;
-   text-align: center;
-   font-family:Raleway-Medium;
+}
+a {
+      text-decoration:none;
+      color:  #CCECFF ;
+
+   }
+a:hover {
+  color: #ffffff ;
+}
+.link_columns:hover{
+  background-color:  #00324d ;
 }
 
 .searchBox {
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
 .inputBox {
   font-family: Raleway-MediumItalic;
   border-style: none none solid;
   line-height: 2;
   font-size: 1.5vw;
-  color: #E6F6FF ;
+  color:  #CCECFF ;
   background:#004266
+
 }
 .column {
   float: left;
   width: 50%;
+  text-align: center;
+  padding-bottom: 5%;
+
+}
+.link_columns {
+  float:left;
+  width: 25%;
+  text-align: center;
+
 }
 .row:after {
   content: "";
@@ -68,6 +94,9 @@ body {background-color: #004266;}
 @media screen and (max-width: 1080px) {
   .column {
     width: 100%;
+  }
+  .link_columns{
+    width:50%
   }
 }
 </style>
@@ -88,7 +117,32 @@ body {background-color: #004266;}
 <div class="searchBox" id="searchBox">
   <form action="https://duckduckgo.com/" method="get">
     <input class="inputBox" id="searchInput" type="text" name="q" placeholder="How can I help?"  autocomplete="off" autofocus tabIndex="2"/></form>
+  </div>
 </div>
 </div>
+<div class="row">
+  <div class="link_columns">
+    <h2>Fun</h2>
+    <p> <a href="https://reddit.com/new"> Reddit </a> </p>
+    <p> <a href="https://isthereanydeal.com"> ITAD </a> </p>
+    <p> <a href="https://twitter.com"> Twitter </a> </p>
+  </div> 
+  <div class="link_columns">
+    <h2>Development</h2>
+    <p> <a href="https://github.com"> Github </a> </p>
+    <p> <a href="https://docs.python.org/3/"> Python Docs </a> </p>
+    <p> <a href="https://docs.python.org/3/"> Python Docs </a> </p>
+
+  </div> 
+  <div class="link_columns">
+    <h2>Tools</h2>
+    <p> <a href="https://w3schools.com/colors/colors_picker.asp"> Colour Picker </a> </p>
+    <p> <a href="https://fonts.google.com"> G Fonts </a> </p>
+  </div>
+  <div class="link_columns">
+    <h2>Intranet</h2>
+    <p> <a href="http://hermes.baker-net.org.uk/wiki/"> Wiki </a> </p>
+  </div> 
 </div>
+</body>
 </html>
