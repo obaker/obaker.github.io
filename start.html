@@ -8,6 +8,7 @@
   * {
   box-sizing: border-box;
   font-family:Raleway-Medium;
+  outline: none;
 }
 @font-face {
    font-family: CutiveMono;
@@ -103,7 +104,6 @@ a:hover {
 <title>Startpage</title>
 </head>
 <body>
-<h1>  </h1>
 <script src="js/start.js"> </script>
 </head>
 <body onload="startTime()">
@@ -116,7 +116,7 @@ a:hover {
 <div class="date" id="date"></div>
 <div class="searchBox" id="searchBox">
   <form action="https://duckduckgo.com/" method="get">
-    <input class="inputBox" id="searchInput" type="text" name="q" placeholder="How can I help?"  autocomplete="off" autofocus tabIndex="2"/></form>
+    <input class="inputBox" id="searchInput" type="search" name="q" placeholder="How can I help?"  autocomplete="off" autofocus tabIndex="2"/></form>
   </div>
 </div>
 </div>
@@ -130,7 +130,6 @@ a:hover {
   <div class="link_columns">
     <h2>Development</h2>
     <p> <a href="https://github.com"> Github </a> </p>
-    <p> <a href="https://docs.python.org/3/"> Python Docs </a> </p>
     <p> <a href="https://docs.python.org/3/"> Python Docs </a> </p>
 
   </div> 
